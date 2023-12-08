@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf8">
+  <title>My Cubing App</title>
+  <link rel="stylesheet" href="./index.css">
+  <!-- Note: the source file is `main.ts`, but here we use the transpiled file name it will have on the web server. -->
+  <script src="main.js" type="module"></script>
+  <script src="https://cdn.cubing.net/js/cubing/twisty" type="module"></script>
+</head>
+
+<body>
+  <h1>My Cubing App</h1>
+  <div id="genScramble"></div>
+  <twisty-player control-panel="none" visualization="3D" puzzle="clock"></twisty-player>
+  
+  <div class="stopwatch">
+    <time>
+        <span id="time">00:00.000</span>
+    </time>
+</div>
+
+<div class="stopwatch-buttons">
+    <a href="#" onclick="event.preventDefault(); start();">Start</a>
+    <a href="#" onclick="event.preventDefault(); stop();">Stop</a>
+    <a href="#" onclick="event.preventDefault(); reset();">Reset</a>
+</div>
+<script src="timer.js"></script>
+</body>
+
+</html>
